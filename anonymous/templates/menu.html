@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="menu-section">
+
+    <div class="container">
+
+        <h1 class="menu-title">
+            Our Delicious Menu
+        </h1>
+
+        <!-- Search Bar -->
+
+        <form method="GET" class="mb-4 text-center">
+
+            <input type="text" name="search" placeholder="Search Food..." class="form-control w-50 d-inline"
+                value="{{ request.GET.search }}">
+
+            <button type="submit" class="btn btn-warning">
+                Search
+            </button>
+
+        </form>
+        <div class="text-center mb-4">
+
+            <a href="/menu/" class="btn btn-dark">
+                All
+            </a>
+
+            <a href="/menu/?category=Pizza" class="btn btn-warning">
+                Pizza
+            </a>
+
+            <a href="/menu/?category=Burger" class="btn btn-success">
+                Burger
+            </a>
+
+            <a href="/menu/?category=Momos" class="btn btn-primary">
+                Momos
+            </a>
+
+            <a href="/menu/?category=Drinks" class="btn btn-info">
+                Drinks
+            </a>
+
+        </div>
+
+        <div class="row">
+
+            {% for food in foods %}
+
+            <div class="col-md-4 mb-4">
+
+                <div class="food-card">
+
+                    <img src="{% static 'images/' %}{{ food.image }}" alt="{{ food.name }}">
+
+                    <div class="food-body">
+
+                        <h3>{{ food.name }}</h3>
+
+                        <p>
+                            {{ food.description }}
+                        </p>
+
+                        <h4>₹{{ food.price }}</h4>
+
+                        <a href="/add-to-cart/{{ food.id }}/" class="food-btn">
+
+                            Add To Cart
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12">
+
+                <div class="alert alert-warning text-center">
+
+                    No Food Found
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

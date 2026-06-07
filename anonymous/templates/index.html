@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="hero-badge">
+                    🍔 Campus Food Delivery
+                </span>
+
+                <h1 class="hero-title">
+                    Delicious Food
+                    Delivered To
+                    Your Campus
+                </h1>
+
+                <p class="hero-subtitle">
+                    Fresh meals, snacks and drinks delivered directly from your college cafeteria.
+                </p>
+
+                <div class="hero-search">
+
+                    <div class="input-group">
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search Food...">
+
+                        <button class="btn btn-warning">
+                            Search
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-buttons">
+
+                    <a href="/menu/" class="btn btn-warning btn-lg">
+                        Order Now
+                    </a>
+
+                    <a href="/register/" class="btn btn-dark btn-lg">
+                        Join EduBite
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <img
+                    src="{% static 'images/hero.webp' %}"
+                    class="hero-img"
+                    alt="Food">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="categories-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Popular Categories
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="category-card">
+                    <div class="icon">☕</div>
+                    <h5>Breakfast</h5>
+                    <p>Tea, Coffee, Sandwich</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="category-card">
+                    <div class="icon">🍛</div>
+                    <h5>Lunch</h5>
+                    <p>Rice, Dal, Thali</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="category-card">
+                    <div class="icon">🍔</div>
+                    <h5>Snacks</h5>
+                    <p>Burger, Pizza, Momos</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="category-card">
+                    <div class="icon">🥤</div>
+                    <h5>Drinks</h5>
+                    <p>Juice, Shake, Coffee</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BEST SELLERS -->
+
+<section class="best-seller">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Best Seller Foods
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="food-card">
+
+                    <img src="{% static 'images/pizza.jpg' %}" class="food-img">
+
+                    <div class="food-content">
+
+                        <h5>Cheese Pizza</h5>
+
+                        <p>Loaded with extra cheese.</p>
+
+                        <div class="food-footer">
+
+                            <h4>₹149</h4>
+
+                            <button class="btn btn-warning">
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="food-card">
+
+                    <img src="{% static 'images/burger.jpg' %}" class="food-img">
+
+                    <div class="food-content">
+
+                        <h5>Crispy Burger</h5>
+
+                        <p>Double Patty Burger.</p>
+
+                        <div class="food-footer">
+
+                            <h4>₹99</h4>
+
+                            <button class="btn btn-warning">
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="food-card">
+
+                    <img src="{% static 'images/momos.jpg' %}" class="food-img">
+
+                    <div class="food-content">
+
+                        <h5>Steamed Momos</h5>
+
+                        <p>Fresh and Delicious.</p>
+
+                        <div class="food-footer">
+
+                            <h4>₹79</h4>
+
+                            <button class="btn btn-warning">
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

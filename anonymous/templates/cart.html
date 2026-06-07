@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="cart-section">
+
+    <div class="container">
+
+        <h1 class="cart-title">
+            My Cart 🛒
+        </h1>
+
+        <div class="row">
+
+            <!-- Cart Items -->
+
+            <div class="col-lg-8">
+
+                {% for item in cart_items %}
+
+                <div class="cart-item">
+
+                    <img src="{% static 'images/' %}{{ item.food.image }}" alt="{{ item.food.name }}">
+
+                    <div class="cart-details">
+
+                        <h4>{{ item.food.name }}</h4>
+
+                        <p>
+                            Fresh and delicious food.
+                        </p>
+
+                        <span class="price">
+                            ₹{{ item.food.price }}
+                        </span>
+
+                    </div>
+
+                    <<div class="quantity-box">
+
+                        <a href="/decrease-cart/{{ item.id }}/" class="btn btn-warning btn-sm">
+
+                            -
+
+                        </a>
+
+                        <span style="margin:10px;">
+                            {{ item.quantity }}
+                        </span>
+
+                        <a href="/add-to-cart/{{ item.food.id }}/" class="btn btn-success btn-sm">
+
+                            +
+
+                        </a>
+
+                        <br><br>
+
+                        <a href="/remove-cart/{{ item.id }}/" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Remove this item from cart?')">
+
+                            Remove
+
+                        </a>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="alert alert-warning">
+
+                Your cart is empty.
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <!-- Summary -->
+
+        <div class="col-lg-4">
+
+            <div class="summary-card">
+
+                <h3>Order Summary</h3>
+
+                <hr>
+
+                <div class="summary-row">
+
+                    <span>Total Items</span>
+
+                    <span>{{ total_items }}</span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Subtotal</span>
+
+                    <span>₹{{ subtotal }}</span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Delivery</span>
+
+                    <span>₹40</span>
+
+                </div>
+
+                <hr>
+
+                <div class="summary-row total">
+
+                    <span>Total</span>
+
+                    <span>₹{{ total }}</span>
+
+                </div>
+
+                <a href="/place-order/" class="checkout-btn" onclick="return confirm('Confirm your order?')">
+
+                    Place Order
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

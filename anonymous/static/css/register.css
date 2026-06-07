@@ -1,0 +1,80 @@
+.register-image{
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+}
+
+.register-image{
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.register-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.10);
+}
+
+.register-card h2{
+    text-align:center;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#282C3F;
+}
+
+.register-card p{
+    text-align:center;
+    color:#777;
+    margin-bottom:25px;
+}
+
+.register-card input{
+    margin-bottom:15px;
+    height:50px;
+    border-radius:12px;
+}
+
+.register-btn{
+    width:100%;
+    background:#FC8019;
+    color:white;
+    border:none;
+    padding:12px;
+    font-size:18px;
+    font-weight:600;
+    border-radius:12px;
+}
+
+.register-btn:hover{
+    background:#e76f00;
+    color:white;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-link a{
+    color:#FC8019;
+    font-weight:600;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+    .register-card{
+        padding:25px;
+    }
+
+}

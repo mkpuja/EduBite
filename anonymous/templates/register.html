@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="register-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center align-items-center">
+
+            <!-- LEFT SIDE IMAGE -->
+
+            <div class="col-lg-6 d-none d-lg-block text-center">
+
+                <img src="{% static 'images/register.jpg' %}"
+                     class="register-image"
+                     alt="Register">
+
+            </div>
+
+            <!-- RIGHT SIDE FORM -->
+
+            <div class="col-lg-5">
+
+                <div class="register-card">
+
+                    <h2>Create Account</h2>
+
+                    <p>
+                        Join EduBite and start ordering delicious food
+                    </p>
+
+                    <form method="POST">
+
+                        {% csrf_token %}
+
+                        <input
+                            type="text"
+                            name="name"
+                            class="form-control"
+                            placeholder="Full Name"
+                            required>
+
+                        <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Email Address"
+                            required>
+
+                        <input
+                            type="text"
+                            name="phone"
+                            class="form-control"
+                            placeholder="Phone Number"
+                            required>
+
+
+                        <input
+                            type="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="Password"
+                            required>
+
+                        <input
+                            type="password"
+                            name="confirm_password"
+                            class="form-control"
+                            placeholder="Confirm Password"
+                            required>
+
+                        <button
+                            type="submit"
+                            class="btn register-btn">
+
+                            Create Account
+
+                        </button>
+
+                    </form>
+
+                    <div class="login-link">
+
+                        Already have an account?
+
+                        <a href="/login/">
+                            Login
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="dashboard-section">
+
+    <div class="container">
+
+        <div class="welcome-box">
+
+            <h1>
+                Welcome,
+                {{ request.session.user_name }}
+                👋
+            </h1>
+
+            <p>
+                Order your favorite food anytime from EduBite.
+            </p>
+
+        </div>
+
+        <h2 class="section-title">
+            Food Categories
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="category-card">
+                    🍕 Pizza
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="category-card">
+                    🍔 Burger
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="category-card">
+                    🥟 Momos
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="category-card">
+                    🥤 Drinks
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">
+            Featured Foods
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="food-card">
+
+                    <img
+                        src="{% static 'images/pizza.jpg' %}"
+                        alt="Pizza">
+
+                    <h4>Cheese Pizza</h4>
+
+                    <p>₹199</p>
+
+                    <a href="/menu/" class="btn btn-warning">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="food-card">
+
+                    <img
+                        src="{% static 'images/burger.jpg' %}"
+                        alt="Burger">
+
+                    <h4>Veg Burger</h4>
+
+                    <p>₹99</p>
+
+                    <a href="/menu/" class="btn btn-warning">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="food-card">
+
+                    <img
+                        src="{% static 'images/momos.jpg' %}"
+                        alt="Momos">
+
+                    <h4>Veg Momos</h4>
+
+                    <p>₹129</p>
+
+                    <a href="/menu/" class="btn btn-warning">
+                        Order Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

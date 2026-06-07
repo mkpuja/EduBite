@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="profile-section">
+
+    <div class="container">
+
+        <div class="profile-card">
+
+            <div class="profile-image">
+
+                <img src="{% static 'images/profile.jpg' %}" alt="Profile">
+
+            </div>
+
+            <h2>
+                {{ user.name }}
+            </h2>
+
+            <p class="profile-role">
+                EduBite User
+            </p>
+
+            <hr>
+
+            <div class="profile-info">
+
+                <p>
+                    <strong>Name :</strong>
+                    {{ user.name }}
+                </p>
+
+                <p>
+                    <strong>Email :</strong>
+                    {{ user.email }}
+                </p>
+
+                <p>
+                    <strong>Phone :</strong>
+                    {{ user.phone }}
+                </p>
+
+            </div>
+
+            <div class="profile-buttons">
+
+                <a href="/dashboard/" class="btn btn-warning">
+                    Dashboard
+                </a>
+
+                <a href="/logout/" class="btn btn-danger">
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
