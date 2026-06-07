@@ -25,6 +25,6 @@ EduBite is a Django-based food ordering web application for students and teacher
 * Bootstrap
 
 ## Author
+
 pujarani Mahanta
 
-Puja
