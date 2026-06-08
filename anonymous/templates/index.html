@@ -28,18 +28,19 @@
 
                 <div class="hero-search">
 
-                    <div class="input-group">
+                    <form action="/menu/" method="GET">
 
-                        <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search Food...">
+                        <div class="input-group">
 
-                        <button class="btn btn-warning">
-                            Search
-                        </button>
+                            <input type="text" name="search" class="form-control" placeholder="Search Food...">
 
-                    </div>
+                            <button type="submit" class="btn btn-warning">
+                                Search
+                            </button>
+
+                        </div>
+
+                    </form>
 
                 </div>
 
@@ -59,10 +60,7 @@
 
             <div class="col-lg-6">
 
-                <img
-                    src="{% static 'images/hero.webp' %}"
-                    class="hero-img"
-                    alt="Food">
+                <img src="{% static 'images/hero.webp' %}" class="hero-img" alt="Food">
 
             </div>
 
@@ -85,35 +83,75 @@
         <div class="row g-4">
 
             <div class="col-md-3">
-                <div class="category-card">
-                    <div class="icon">☕</div>
-                    <h5>Breakfast</h5>
-                    <p>Tea, Coffee, Sandwich</p>
-                </div>
+
+                <a href="/menu/?category=Pizza" class="text-decoration-none text-dark">
+
+                    <div class="category-card">
+
+                        <div class="icon">🍕</div>
+
+                        <h5>Pizza</h5>
+
+                        <p>Cheese, Veg, Farmhouse</p>
+
+                    </div>
+
+                </a>
+
             </div>
 
             <div class="col-md-3">
-                <div class="category-card">
-                    <div class="icon">🍛</div>
-                    <h5>Lunch</h5>
-                    <p>Rice, Dal, Thali</p>
-                </div>
+
+                <a href="/menu/?category=Burger" class="text-decoration-none text-dark">
+
+                    <div class="category-card">
+
+                        <div class="icon">🍔</div>
+
+                        <h5>Burger</h5>
+
+                        <p>Veg, Cheese, Crispy</p>
+
+                    </div>
+
+                </a>
+
             </div>
 
             <div class="col-md-3">
-                <div class="category-card">
-                    <div class="icon">🍔</div>
-                    <h5>Snacks</h5>
-                    <p>Burger, Pizza, Momos</p>
-                </div>
+
+                <a href="/menu/?category=Momos" class="text-decoration-none text-dark">
+
+                    <div class="category-card">
+
+                        <div class="icon">🥟</div>
+
+                        <h5>Momos</h5>
+
+                        <p>Veg, Fried, Steamed</p>
+
+                    </div>
+
+                </a>
+
             </div>
 
             <div class="col-md-3">
-                <div class="category-card">
-                    <div class="icon">🥤</div>
-                    <h5>Drinks</h5>
-                    <p>Juice, Shake, Coffee</p>
-                </div>
+
+                <a href="/menu/?category=Drinks" class="text-decoration-none text-dark">
+
+                    <div class="category-card">
+
+                        <div class="icon">🥤</div>
+
+                        <h5>Drinks</h5>
+
+                        <p>Juice, Shake, Coffee</p>
+
+                    </div>
+
+                </a>
+
             </div>
 
         </div>
